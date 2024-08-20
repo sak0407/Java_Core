@@ -36,7 +36,7 @@ public class ReverseString {
 
     public static String solve(String A) {
 
-        A.trim();
+
         A=reverse(A,0,A.length()-1);
 
 

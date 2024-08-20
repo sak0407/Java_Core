@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Array/Array.iml" filepath="$PROJECT_DIR$/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaList/JavaList.iml" filepath="$PROJECT_DIR$/JavaList/JavaList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaMap/JavaMap.iml" filepath="$PROJECT_DIR$/JavaMap/JavaMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LLD/LLD.iml" filepath="$PROJECT_DIR$/LLD/LLD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/String/String.iml" filepath="$PROJECT_DIR$/String/String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Threading/Threading.iml" filepath="$PROJECT_DIR$/Threading/Threading.iml" />
+    </modules>
+  </component>
+</project>

@@ -41,7 +41,7 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     private boolean rangeCheck(int index){
-        if(index < 0 || index<= this.size){
+        if(index < 0 || index > this.size){
             return false;
         }
         return true;
@@ -183,7 +183,7 @@ public class MyArrayList<E> implements MyList<E> {
 
 
         li.remove(5);
-       li.remove(1);
+        li.remove(1);
         System.out.println("Total Size "+li.size);
         li.clear();
         System.out.println("Total Size "+li.size);
