@@ -1,3 +1,6 @@
+import java.util.Collections;
+import java.util.PriorityQueue;
+
 /*
 Given N bags, each bag contains Bi chocolates.There is a kid and a magician.
 In a unit of time, the kid can choose any bag i, and eat Bi chocolates from it,
@@ -30,4 +33,29 @@ Maximum number of chocolates that can be eaten is 33.
 
 * */
 public class MagicianChocolates {
+    public static void main(String[] args) {
+        int[] A={2,4,6,8,10};
+
+        int B=5;
+        PriorityQueue<Integer> maxPQ=new PriorityQueue<>(Collections.reverseOrder());
+
+        int ans=0;
+        for(int i=0;i<A.length;i++){
+            maxPQ.add(A[i]);
+
+        }
+
+
+
+        for(int i=0;i<B;i++){
+            int a=maxPQ.element();
+            ans=ans+a;
+            maxPQ.poll();
+            int b=a/2;
+            maxPQ.add(b);
+        }
+        System.out.println("========");
+
+        System.out.println(ans);
+    }
 }

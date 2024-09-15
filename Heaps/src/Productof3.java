@@ -1,7 +1,11 @@
-/*Given an integer array A of size N.
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.PriorityQueue;
+
+/*
+Given an integer array A of size N.
 You have to find the product of the three largest integers in array A from
-range 1 to i,
-where i goes from 1 to N.
+range 1 to i, where i goes from 1 to N.
 Return an array B where B[i] is the product of the largest 3 integers in
 range 1 to i in array A. If i < 3, then the integer at index i in B should be -1.
 
@@ -40,4 +44,52 @@ Output 2:
 
 * */
 public class Productof3 {
+    public static void main(String[] args) {
+
+        int[] A={10,2,13,4};
+
+        int n=3; //as we need 3rd highest
+        ArrayList<Integer> ans=new ArrayList<>();
+        PriorityQueue<Integer> pq=new PriorityQueue<>();
+        int product=1;
+        for(int i=0;i<3;i++){
+            pq.add(A[i]);
+
+            product=product*A[i];
+            if(i==2){
+                ans.add(product);
+
+            }else{
+                ans.add(-1);
+            }
+
+        }
+
+
+         //System.out.println(product);
+        // pq.stream().forEach(i->System.out.println(i));
+
+
+        for(int i=n;i<A.length;i++){
+           // product=1;
+            if(A[i]> pq.peek()){
+                product =product / pq.element();
+                product=product *  A[i];
+                ans.add(product);
+                pq.poll();
+                pq.add(A[i]);
+            }else{
+
+                ans.add(product);
+
+            }
+ 
+        }
+
+
+        int[] a=ans.stream().mapToInt(Integer::intValue).toArray();
+
+        Arrays.stream(a).forEach(System.out::print);
+
+    }
 }
